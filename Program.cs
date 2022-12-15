@@ -177,3 +177,51 @@
 // Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
+
+
+
+
+// Console.WriteLine("Введите размер массива");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] numbers = new int[size];
+// Random(numbers);
+// Console.WriteLine("Вот наш массив: ");
+// PrintArray(numbers);
+// int a = 0;
+// int b = 0;
+// int c = 0;
+// int d = 0;
+// int f = 0;
+// int g = 0;
+
+
+//     for (int i = 0; i < numbers.Length; i++)
+    
+//      a = numbers[0];
+//      b = numbers[^1];
+//      c = numbers[1];
+//      d = numbers[^2];
+//      f = numbers[0];
+//      g = numbers[^1];
+    
+
+//     Console.WriteLine($"{a*b} {c*d} {f*g} ");
+    
+
+// void Random(int[] numbers)
+// {
+//     for(int i = 0; i < numbers.Length; i++)
+//         {
+//             numbers[i] = new Random().Next(0,9);
+//         }
+// }
+// void PrintArray(int[] numbers)
+// {
+//     Console.Write("[ ");
+//     for(int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.Write(numbers[i] + " ");
+//         }
+//     Console.Write("]");
+//     Console.WriteLine();
+// }
