@@ -3,37 +3,46 @@
 // [345, 897, 568, 234] -> 2
 
 
-// Console.WriteLine("Введите размер массива");
-// int size = Convert.ToInt32(Console.ReadLine());
-// int[] numbers = new int[size];
-// random(numbers);
-// Console.WriteLine("Вот наш массив: ");
-// PrintArray(numbers);
-// int count = 0;
-
-// for (int i = 0; i < numbers.Length; i++)
-// if (numbers[i] % 2 == 0)
-// count++;
-
-// Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
-
-// void random(int[] numbers)
+// int [] Nazvanie(int size, int minValue, int maxValue)
 // {
-//     for(int i = 0; i < numbers.Length; i++)
+//     int [] array = new int[size];
+//     for(int i = 0; i < size; i++)
 //     {
-//         numbers[i] = new Random().Next(100,1000);
+//         array[i] = new Random().Next(minValue, maxValue+1);
 //     }
+//     return array;
 // }
-// void PrintArray(int[] numbers)
+
+// void Showarray(int [] array)
 // {
-//     Console.Write("[ ");
-//     for(int i = 0; i < numbers.Length; i++)
+//     for(int i = 0; i < array.Length; i++)
 //     {
-//         Console.Write(numbers[i] + " ");
+//         Console.Write($"{array[i]} ");
 //     }
-//     Console.Write("]");
 //     Console.WriteLine();
 // }
+
+// int NazvaniePlus(int [] array)
+// {
+//     int num = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] % 2 == 0)
+//             num++;
+//     }
+//     return num;
+// }
+
+
+// int size = 4;
+// int min = 99;
+// int max = 1000;
+// int [] array = Nazvanie(size, min, max);
+// Showarray(array);
+// Console.WriteLine($"Количество четных чисел в массиве {NazvaniePlus(array)}");
+
+
+
 
 // Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
 // Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
@@ -70,7 +79,7 @@
 //     for(int i = 0; i < array.Length; i++)
 //     {
 //         if(array[i] > 9 && array[i] < 100)
-//        raz += array[i];
+//        raz ++;
 //     }
 //     return raz;
 // }
@@ -82,7 +91,7 @@
 // int max = 1000;
 // int [] array = Nazvanie(size, min, max);
 // Showarray(array);
-// Console.WriteLine($"Summ of PLus numbers is {NazvaniePlus(array)}");
+// Console.WriteLine($"Количество эелементов массива в отрезке [10, 99] {NazvaniePlus(array)}");
 
 
 
@@ -96,83 +105,107 @@
 
 // [-4, -6, 89, 6] -> 0
 
-// Console.WriteLine("Введите размер массива");
-// int size = Convert.ToInt32(Console.ReadLine());
-// int[] numbers = new int[size];
-// Random(numbers);
-// Console.WriteLine("Вот наш массив: ");
-// PrintArray(numbers);
-// int sum = 0;
-
-//     for (int i = 0; i < numbers.Length; i++)
-//     sum = sum + numbers[i];
-
-//     Console.WriteLine($"всего {numbers.Length} чисел, сумма элементов на нечётных позициях = {sum}");
-    
-
-// void Random(int[] numbers)
+// int [] Nazvanie(int size, int minValue, int maxValue)
 // {
-//     for(int i = 0; i < numbers.Length; i++)
-//         {
-//             numbers[i] = new Random().Next(-99,99);
-//         }
+//     int [] array = new int[size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue+1, maxValue+1);
+//     }
+//     return array;
 // }
-// void PrintArray(int[] numbers)
+
+// void Showarray(int [] array)
 // {
-//     Console.Write("[ ");
-//     for(int i = 0; i < numbers.Length; i++)
-//         {
-//             Console.Write(numbers[i] + " ");
-//         }
-//     Console.Write("]");
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
 //     Console.WriteLine();
 // }
+
+
+
+// int NazvaniePlus(int [] array)
+// {
+//     int summ = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] % 2 - 1 == 0)
+//             summ += array[i];
+//     }
+//     return summ;
+// }
+
+
+// int size = 4;
+// int min = 1;
+// int max = 9;
+// int [] array = Nazvanie(size, min, max);
+// Showarray(array);
+// Console.WriteLine($"Сумма на нечетных позициях {NazvaniePlus(array)}");
+
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 // [3 7 22 2 78] -> 76
 
-// Console.WriteLine("Введите размер массива");
-// int size = Convert.ToInt32(Console.ReadLine());
-// double[] numbers = new double[size];
-// Random(numbers);
-// Console.WriteLine("Вот наш массив: ");
-// PrintArray(numbers);
-// double min = Int32.MaxValue;
-// double max = Int32.MinValue;
 
-// for (int i = 0; i < numbers.Length; i++)
+
+// double [] Nazvanie(int size, int minValue, int maxValue)
 // {
-//     if (numbers[i] > max)
-//         {
-//             max = numbers[i];
-//         }
-//     if (numbers[i] < min)
-//         {
-//             min = numbers[i];
-//         }
+//     double [] array = new double[size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue+1);
+//     }
+//     return array;
 // }
 
-// Console.WriteLine($"всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
-// Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
-
-// void Random(double[] numbers)
+// void Showarray(double [] array)
 // {
-//     for(int i = 0; i < numbers.Length; i++)
-//         {
-//             numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
-//         }
-// }
-// void PrintArray(double[] numbers)
-// {
-//     Console.Write("[ ");
-//     for(int i = 0; i < numbers.Length; i++)
-//         {
-//             Console.Write(numbers[i] + " ");
-//         }
-//     Console.Write("]");
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
 //     Console.WriteLine();
 // }
+
+
+
+// double NazvanieMax(double [] array)
+// {
+//     double max = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] > max)
+//             max= array[i];
+//     }
+//     return max;
+// }
+
+// double NazvanieMin(double [] array)
+// {
+//     double min = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] < min)
+//             min= array[i];
+//     }
+//     return min;
+// }
+
+// int size = 4;
+// int min = 1;
+// int max = 9;
+// double [] array = Nazvanie(size, min, max);
+// Showarray(array);
+// Console.WriteLine($"Разница между максимальным и минимальным элементов массива = {NazvanieMax(array) - NazvanieMin(array)}");
+
+
+
+
+
 
 // Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 // [1 2 3 4 5] -> 5 8 3
@@ -180,48 +213,55 @@
 
 
 
-
-// Console.WriteLine("Введите размер массива");
-// int size = Convert.ToInt32(Console.ReadLine());
-// int[] numbers = new int[size];
-// Random(numbers);
-// Console.WriteLine("Вот наш массив: ");
-// PrintArray(numbers);
-// int a = 0;
-// int b = 0;
-// int c = 0;
-// int d = 0;
-// int f = 0;
-// int g = 0;
-
-
-//     for (int i = 0; i < numbers.Length; i++)
-    
-//      a = numbers[0];
-//      b = numbers[^1];
-//      c = numbers[1];
-//      d = numbers[^2];
-//      f = numbers[0];
-//      g = numbers[^1];
-    
-
-//     Console.WriteLine($"{a*b} {c*d} {f*g} ");
-    
-
-// void Random(int[] numbers)
+// int [] Nazvanie(int size, int minValue, int maxValue)
 // {
-//     for(int i = 0; i < numbers.Length; i++)
-//         {
-//             numbers[i] = new Random().Next(0,9);
-//         }
+//     int [] array = new int[size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue+1);
+//     }
+//     return array;
 // }
-// void PrintArray(int[] numbers)
+
+// void Showarray(int [] array)
 // {
-//     Console.Write("[ ");
-//     for(int i = 0; i < numbers.Length; i++)
-//         {
-//             Console.Write(numbers[i] + " ");
-//         }
-//     Console.Write("]");
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
 //     Console.WriteLine();
 // }
+
+
+
+// int NazvanieOne(int [] array)
+// {
+//     int one = 0;
+  
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array [i] > 0)
+//             one = array[0];
+        
+//     }
+//     return one;
+// }
+
+// int NazvanieTwo(int [] array)
+// {
+//     int two = array [^1];
+//     for(int i = array.Length; i < array.Length; i++)
+//     {
+//         if(array [i] > 0)
+//             two = array[i];
+      
+//     }
+//     return two;
+// }
+
+// int size = 4;
+// int min = -9;
+// int max = 9;
+// int [] array = Nazvanie(size, min, max);
+// Showarray(array);
+// Console.WriteLine($"{NazvanieOne(array) * NazvanieTwo(array)} ");
